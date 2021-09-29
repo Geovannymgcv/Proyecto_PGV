@@ -52,6 +52,7 @@ public class Controlador {
         };
         vista.getJmiRegistro().addActionListener(l -> cargarDialogo(1));
         vista.getBtnRegistrar().addActionListener(l -> cargarRegistrar(1));
+        vista.getJmiCuenta().addActionListener(l -> cargarCuenta(1));
 //        vista.getBtnCrear().addActionListener(l -> cargarDialogo(1));
 //        vista.getBtnEditar().addActionListener(l -> cargarDialogo(2));
 //        vista.getBtnExaminar().addActionListener(l -> examinaFoto());
@@ -72,9 +73,16 @@ public class Controlador {
         private void cargarRegistrar (int origen){
             if (origen == 1) {
                 vista.getJlgIngreso().setVisible(false);
-                vista.getJlgRegistro().setSize(800, 600);
+                vista.getJlgRegistro().setSize(650,620);
                 vista.getJlgRegistro().setLocationRelativeTo(vista);
                 vista.getJlgRegistro().setVisible(true);
+            }
+        }
+        private void cargarCuenta (int origen){
+            if (origen == 1) {
+                vista.getJlgCuenta().setSize(505, 515);
+                vista.getJlgCuenta().setLocationRelativeTo(vista);
+                vista.getJlgCuenta().setVisible(true);
             }
         }
 }
