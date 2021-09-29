@@ -5,6 +5,7 @@
  */
 package vista;
 
+import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
@@ -13,6 +14,7 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.JToolBar;
 
 /**
  *
@@ -27,21 +29,31 @@ public class VistaGeneral extends javax.swing.JFrame {
         initComponents();
     }
 
-    public JMenuItem getJmiEncuesta() {
-        return jmiEncuesta;
+    public JDialog getJlgIngreso() {
+        return jlgIngreso;
     }
 
-    public void setJmiEncuesta(JMenuItem jmiEncuesta) {
-        this.jmiEncuesta = jmiEncuesta;
+    public void setJlgIngreso(JDialog jlgIngreso) {
+        this.jlgIngreso = jlgIngreso;
     }
 
-    public JMenuItem getJmiRegistro() {
-        return jmiRegistro;
+
+    public JButton getjButton1() {
+        return jButton1;
     }
 
-    public void setJmiRegistro(JMenuItem jmiRegistro) {
-        this.jmiRegistro = jmiRegistro;
+    public void setjButton1(JButton jButton1) {
+        this.jButton1 = jButton1;
     }
+
+    public JComboBox<String> getjComboBox14() {
+        return jComboBox14;
+    }
+
+    public void setjComboBox14(JComboBox<String> jComboBox14) {
+        this.jComboBox14 = jComboBox14;
+    }
+
 
     public JComboBox<String> getCb1() {
         return cb1;
@@ -235,13 +247,7 @@ public class VistaGeneral extends javax.swing.JFrame {
         this.jLabel9 = jLabel9;
     }
 
-    public JMenuBar getjMenuBar1() {
-        return jMenuBar1;
-    }
 
-    public void setjMenuBar1(JMenuBar jMenuBar1) {
-        this.jMenuBar1 = jMenuBar1;
-    }
 
     public JPanel getjPanel1() {
         return jPanel1;
@@ -293,13 +299,7 @@ public class VistaGeneral extends javax.swing.JFrame {
         this.jlgRegistro = jlgRegistro;
     }
 
-    public JMenu getJmCliente() {
-        return jmCliente;
-    }
 
-    public void setJmCliente(JMenu jmCliente) {
-        this.jmCliente = jmCliente;
-    }
 
     public JTextField getJtApellidos() {
         return jtApellidos;
@@ -357,6 +357,110 @@ public class VistaGeneral extends javax.swing.JFrame {
         this.jtTelefono = jtTelefono;
     }
 
+    public JMenuBar getjMenuBar1() {
+        return jMenuBar1;
+    }
+
+    public void setjMenuBar1(JMenuBar jMenuBar1) {
+        this.jMenuBar1 = jMenuBar1;
+    }
+
+    public JMenuItem getjMenuItem1() {
+        return jmiRegistro;
+    }
+
+    public void setjMenuItem1(JMenuItem jMenuItem1) {
+        this.jmiRegistro = jMenuItem1;
+    }
+
+    public JMenuItem getjMenuItem2() {
+        return jMenuItem2;
+    }
+
+    public void setjMenuItem2(JMenuItem jMenuItem2) {
+        this.jMenuItem2 = jMenuItem2;
+    }
+
+    public JMenuItem getjMenuItem3() {
+        return jMenuItem3;
+    }
+
+    public void setjMenuItem3(JMenuItem jMenuItem3) {
+        this.jMenuItem3 = jMenuItem3;
+    }
+
+    public JMenuItem getjMenuItem4() {
+        return jMenuItem4;
+    }
+
+    public void setjMenuItem4(JMenuItem jMenuItem4) {
+        this.jMenuItem4 = jMenuItem4;
+    }
+
+    public JMenu getJmSistema() {
+        return jmSistema;
+    }
+
+    public void setJmSistema(JMenu jmSistema) {
+        this.jmSistema = jmSistema;
+    }
+
+    public JMenu getJmUsuario() {
+        return jmUsuario;
+    }
+
+    public void setJmUsuario(JMenu jmUsuario) {
+        this.jmUsuario = jmUsuario;
+    }
+
+    public JMenuItem getJmiRegistro() {
+        return jmiRegistro;
+    }
+
+    public void setJmiRegistro(JMenuItem jmiRegistro) {
+        this.jmiRegistro = jmiRegistro;
+    }
+
+    public JButton getBtnIngresar() {
+        return btnIngresar;
+    }
+
+    public void setBtnIngresar(JButton btnIngresar) {
+        this.btnIngresar = btnIngresar;
+    }
+
+    public JButton getBtnRegistrar() {
+        return btnRegistrar;
+    }
+
+    public void setBtnRegistrar(JButton btnRegistrar) {
+        this.btnRegistrar = btnRegistrar;
+    }
+
+    public JButton getBtnSalir() {
+        return btnSalir;
+    }
+
+    public void setBtnSalir(JButton btnSalir) {
+        this.btnSalir = btnSalir;
+    }
+
+    public JTextField getTxtContrasena() {
+        return txtContrasena;
+    }
+
+    public void setTxtContrasena(JTextField txtContrasena) {
+        this.txtContrasena = txtContrasena;
+    }
+
+    public JTextField getTxtUsuario() {
+        return txtUsuario;
+    }
+
+    public void setTxtUsuario(JTextField txtUsuario) {
+        this.txtUsuario = txtUsuario;
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -404,10 +508,26 @@ public class VistaGeneral extends javax.swing.JFrame {
         jComboBox14 = new javax.swing.JComboBox<>();
         cb3 = new javax.swing.JComboBox<>();
         cb4 = new javax.swing.JComboBox<>();
+        jlgIngreso = new javax.swing.JDialog();
+        jPanel7 = new javax.swing.JPanel();
+        jLabel10 = new javax.swing.JLabel();
+        jPanel8 = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        txtUsuario = new javax.swing.JTextField();
+        txtContrasena = new javax.swing.JTextField();
+        btnIngresar = new javax.swing.JButton();
+        btnRegistrar = new javax.swing.JButton();
+        btnSalir = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        jPanel6 = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jmCliente = new javax.swing.JMenu();
+        jmSistema = new javax.swing.JMenu();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
+        jmUsuario = new javax.swing.JMenu();
         jmiRegistro = new javax.swing.JMenuItem();
-        jmiEncuesta = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
 
         jlgRegistro.setPreferredSize(new java.awt.Dimension(800, 400));
 
@@ -507,7 +627,7 @@ public class VistaGeneral extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jtDiscapacidad, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jButton1))
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap(117, Short.MAX_VALUE))
         );
 
         jPanel2.setBackground(new java.awt.Color(204, 204, 204));
@@ -544,8 +664,7 @@ public class VistaGeneral extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(98, 98, 98))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jLabel17.setText("RESPONDE ESTA PEQUEÑA ENCUESTA PARA AYUDARNOS A ENCONTRAR EL VEHICULO QUE MEJOR SE ADAPTE A SUS NECESIDADES");
@@ -667,17 +786,147 @@ public class VistaGeneral extends javax.swing.JFrame {
                 .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel7.setBackground(new java.awt.Color(204, 204, 204));
+
+        jLabel10.setText("INGRESO");
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGap(188, 188, 188)
+                .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(168, 168, 168))
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(28, 28, 28))
+        );
+
+        jLabel11.setText("Usuario (CI):");
+
+        jLabel12.setText("Contraseña:");
+
+        btnIngresar.setText("Ingresar");
+
+        btnRegistrar.setText("Registrar");
+
+        btnSalir.setText("Salir");
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel8Layout.createSequentialGroup()
+                                .addGap(71, 71, 71)
+                                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel12)
+                                    .addComponent(jLabel11))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txtContrasena)
+                                    .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPanel8Layout.createSequentialGroup()
+                                .addGap(152, 152, 152)
+                                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(btnIngresar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btnRegistrar, javax.swing.GroupLayout.DEFAULT_SIZE, 96, Short.MAX_VALUE))))
+                        .addGap(0, 118, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
+        );
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel11)
+                    .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel12)
+                    .addComponent(txtContrasena, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(52, 52, 52)
+                .addComponent(btnIngresar)
+                .addGap(18, 18, 18)
+                .addComponent(btnRegistrar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
+                .addComponent(btnSalir)
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout jlgIngresoLayout = new javax.swing.GroupLayout(jlgIngreso.getContentPane());
+        jlgIngreso.getContentPane().setLayout(jlgIngresoLayout);
+        jlgIngresoLayout.setHorizontalGroup(
+            jlgIngresoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jlgIngresoLayout.setVerticalGroup(
+            jlgIngresoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jlgIngresoLayout.createSequentialGroup()
+                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jmCliente.setText("Cliente");
+        jPanel3.setBackground(new java.awt.Color(204, 204, 204));
 
-        jmiRegistro.setText("Registro");
-        jmCliente.add(jmiRegistro);
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 820, Short.MAX_VALUE)
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 81, Short.MAX_VALUE)
+        );
 
-        jmiEncuesta.setText("Encuesta");
-        jmCliente.add(jmiEncuesta);
+        jPanel6.setBackground(new java.awt.Color(204, 204, 204));
 
-        jMenuBar1.add(jmCliente);
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 34, Short.MAX_VALUE)
+        );
+
+        jmSistema.setText("Sistema");
+
+        jMenuItem3.setText("Catalogo Completo de Vehiculos");
+        jmSistema.add(jMenuItem3);
+
+        jMenuItem4.setText("Salir");
+        jmSistema.add(jMenuItem4);
+
+        jMenuBar1.add(jmSistema);
+
+        jmUsuario.setText("Usuario");
+
+        jmiRegistro.setText("Ingreso/Registro");
+        jmUsuario.add(jmiRegistro);
+
+        jMenuItem2.setText("Cuenta");
+        jmUsuario.add(jMenuItem2);
+
+        jMenuBar1.add(jmUsuario);
 
         setJMenuBar(jMenuBar1);
 
@@ -685,11 +934,15 @@ public class VistaGeneral extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 810, Short.MAX_VALUE)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 488, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 373, Short.MAX_VALUE)
+                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
@@ -702,6 +955,9 @@ public class VistaGeneral extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnIngresar;
+    private javax.swing.JButton btnRegistrar;
+    private javax.swing.JButton btnSalir;
     private javax.swing.JComboBox<String> cb1;
     private javax.swing.JComboBox<String> cb2;
     private javax.swing.JComboBox<String> cb3;
@@ -711,6 +967,9 @@ public class VistaGeneral extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JComboBox<String> jComboBox14;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
@@ -728,14 +987,22 @@ public class VistaGeneral extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
     private javax.swing.JDialog jlgEncuesta;
+    private javax.swing.JDialog jlgIngreso;
     private javax.swing.JDialog jlgRegistro;
-    private javax.swing.JMenu jmCliente;
-    private javax.swing.JMenuItem jmiEncuesta;
+    private javax.swing.JMenu jmSistema;
+    private javax.swing.JMenu jmUsuario;
     private javax.swing.JMenuItem jmiRegistro;
     private javax.swing.JTextField jtApellidos;
     private javax.swing.JTextField jtCi;
@@ -744,5 +1011,7 @@ public class VistaGeneral extends javax.swing.JFrame {
     private javax.swing.JTextField jtEdad;
     private javax.swing.JTextField jtNombres;
     private javax.swing.JTextField jtTelefono;
+    private javax.swing.JTextField txtContrasena;
+    private javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
 }

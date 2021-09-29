@@ -28,7 +28,8 @@ public class Controlador {
         this.conectcliente = modelo;
         this.vista = vista;
         //SOLAMENTE INICIALIZAR ELEMENTOS.
-        vista.setTitle("XXXX XXXX");
+        vista.setTitle("CONCESIONARIO XXXX");
+        
         vista.setVisible(true);
     }
         public void iniciaControl() {
@@ -50,6 +51,7 @@ public class Controlador {
             }
         };
         vista.getJmiRegistro().addActionListener(l -> cargarDialogo(1));
+        vista.getBtnRegistrar().addActionListener(l -> cargarRegistrar(1));
 //        vista.getBtnCrear().addActionListener(l -> cargarDialogo(1));
 //        vista.getBtnEditar().addActionListener(l -> cargarDialogo(2));
 //        vista.getBtnExaminar().addActionListener(l -> examinaFoto());
@@ -62,10 +64,17 @@ public class Controlador {
     }
         private void cargarDialogo(int origen) {
             if (origen == 1) {
-                vista.getJlgRegistro().setSize(800, 500);
+                vista.getJlgIngreso().setSize(430, 370);
+                vista.getJlgIngreso().setLocationRelativeTo(vista);
+                vista.getJlgIngreso().setVisible(true);
+            }
+        }
+        private void cargarRegistrar (int origen){
+            if (origen == 1) {
+                vista.getJlgIngreso().setVisible(false);
+                vista.getJlgRegistro().setSize(800, 600);
                 vista.getJlgRegistro().setLocationRelativeTo(vista);
                 vista.getJlgRegistro().setVisible(true);
             }
-            
         }
 }
