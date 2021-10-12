@@ -6,6 +6,7 @@
 package modelo;
 
 import java.awt.Image;
+import java.util.Date;
 
 /**
  *
@@ -13,26 +14,38 @@ import java.awt.Image;
  */
 public class Cliente {
     private String ci;
-    private String nombre;
-    private String apellido;
-    private int edad;
+    private String nombres;
+    private String apellidos;
+    private Date edad;
     private String correo;
     private String telefono;
+    private String direccion;
     private String discapacidad;
     private Image foto;
+    private String contrasena;
 
     public Cliente() {
     }
 
-    public Cliente(String ci, String nombre, String apellido, int edad, String correo, String telefono, String discapacidad, Image foto) {
+    public Cliente(String ci, String nombres, String apellidos, Date edad, String correo, String telefono,String direccion, String discapacidad, Image foto, String contrasena) {
         this.ci = ci;
-        this.nombre = nombre;
-        this.apellido = apellido;
+        this.nombres = nombres;
+        this.apellidos = apellidos;
         this.edad = edad;
         this.correo = correo;
         this.telefono = telefono;
+        this.direccion = direccion;
         this.discapacidad = discapacidad;
         this.foto = foto;
+        this.contrasena = contrasena;
+    }
+
+    public String getContrasena() {
+        return contrasena;
+    }
+
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
     }
 
     public String getCi() {
@@ -43,27 +56,27 @@ public class Cliente {
         this.ci = ci;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getNombres() {
+        return nombres;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombres(String nombres) {
+        this.nombres = nombres;
     }
 
-    public String getApellido() {
-        return apellido;
+    public String getApellidos() {
+        return apellidos;
     }
 
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
     }
 
-    public int getEdad() {
+    public Date getEdad() {
         return edad;
     }
 
-    public void setEdad(int edad) {
+    public void setEdad(Date edad) {
         this.edad = edad;
     }
 
@@ -81,6 +94,14 @@ public class Cliente {
 
     public void setTelefono(String telefono) {
         this.telefono = telefono;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
     }
 
     public String getDiscapacidad() {

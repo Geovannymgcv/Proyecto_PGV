@@ -17,13 +17,12 @@ public class Encuesta {
     private int p3;
     private String p4;
     private String p5;
-    private String p6;
-    private int p7;
+    private int p6;
 
     public Encuesta() {
     }
 
-    public Encuesta(String id_encuesta, String ci_cliente, String p1, String p2, int p3, String p4, String p5, String p6, int p7) {
+    public Encuesta(String id_encuesta, String ci_cliente, String p1, String p2, int p3, String p4, String p5, int p6) {
         this.id_encuesta = id_encuesta;
         this.ci_cliente = ci_cliente;
         this.p1 = p1;
@@ -32,7 +31,6 @@ public class Encuesta {
         this.p4 = p4;
         this.p5 = p5;
         this.p6 = p6;
-        this.p7 = p7;
     }
 
     public String getId_encuesta() {
@@ -91,20 +89,12 @@ public class Encuesta {
         this.p5 = p5;
     }
 
-    public String getP6() {
+    public int getP6() {
         return p6;
     }
 
-    public void setP6(String p6) {
+    public void setP6(int p6) {
         this.p6 = p6;
-    }
-
-    public int getP7() {
-        return p7;
-    }
-
-    public void setP7(int p7) {
-        this.p7 = p7;
     }
     
 }

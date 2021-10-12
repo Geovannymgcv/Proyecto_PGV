@@ -17,31 +17,33 @@ import vista.VistaGeneral;
  *
  * @author chusp
  */
-public class ConnectionEncuesta extends Encuesta{
+public class ConnectionVehiculos extends Vehiculo{
     private ConnectionBD con = new ConnectionBD();
-    public ConnectionEncuesta() {
+
+    public ConnectionVehiculos() {
     }
 
-    public ConnectionEncuesta(String id_encuesta, String ci_cliente, String p1, String p2, int p3, String p4, String p5, int p6) {
-        super(id_encuesta, ci_cliente, p1, p2, p3, p4, p5, p6);
+    public ConnectionVehiculos(int cilindraje, String id_modelo, String marca, String nombre, double precio_sin_iva, String imagen, String tipo_cambios, String tipo, String todoterreno) {
+        super(cilindraje, id_modelo, marca, nombre, precio_sin_iva, imagen, tipo_cambios, tipo, todoterreno);
     }
-    public List<Encuesta> listarEncuestas() {
+        public List<Vehiculo> listarVehiculos() {
 
-        String sql = "select * from encuesta"; //Campos de la base de datos.
+        String sql = "select * from vehiculo"; //Campos de la base de datos.
         ResultSet rs = con.consulta(sql);
-        List<Encuesta> lista = new ArrayList<Encuesta>();
+        List<Vehiculo> lista = new ArrayList<Vehiculo>();
         try {
             while (rs.next()) {
-                Encuesta en = new Encuesta();
-                en.setId_encuesta(rs.getString("id_encuesta"));//campos de la BD
-                en.setCi_cliente(rs.getString("ci_cliente"));//campos de la BD
-                en.setP1(rs.getString("1"));//campos de la BD
-                en.setP2(rs.getString("2"));
-                en.setP3(Integer.parseInt(rs.getString("3")));
-                en.setP4(rs.getString("4"));
-                en.setP5(rs.getString("5"));
-                en.setP6(Integer.parseInt(rs.getString("6")));
-                lista.add(en);
+                Vehiculo ve = new Vehiculo();
+                ve.setId_modelo(rs.getString("id_modelo"));//campos de la BD
+                ve.setCilindraje(Integer.parseInt(rs.getString("cilindraje")));//campos de la BD
+                ve.setMarca(rs.getString("marca"));//campos de la BD
+                ve.setNombre(rs.getString("nombre"));
+                ve.setPrecio_sin_iva(Integer.parseInt(rs.getString("precio_sin_iva")));
+                ve.setImagen(rs.getString("imagen"));
+                ve.setTipo_cambios(rs.getString("tipo_cambios"));
+                ve.setTipo(rs.getString("tipo"));
+                ve.setTodoterreno(rs.getString("todoterreno"));
+                lista.add(ve);
             }
             //IMPORTANTISIMO CERRAR CONEXION.
             rs.close();
@@ -81,14 +83,13 @@ public class ConnectionEncuesta extends Encuesta{
 //        }
 //
 //    }
-    private VistaGeneral vista;
-    public boolean grabar() {
-        String sql;
-        int a = 0 + (int) (Math.random() * 100);
-        String b = Integer.toString(a);
-        String c = vista.getJtCi().toString();
-        sql="INSERT INTO encuesta(id_encuesta, ci_cliente, 1, 2, 3, 4, 5, 6, 7) ";
-        sql+=" VALUES ('" + b+ "','" + c+ "','" + vista.getCb1().toString()+ "','" + vista.getCb2().toString()+ "','" + Integer.parseInt(vista.getCb3().toString())+ "','" + vista.getCb4().toString()+ "','" + vista.getCb5().toString()+ "','" + Integer.parseInt(vista.getCb6().toString())+ "')";
-        return con.accion(sql);
-    }
+        
+        
+//    private VistaGeneral vista;
+//    public boolean grabar() {
+//        String sql;
+//        sql="INSERT INTO encuesta(id_encuesta, ci_cliente, 1, 2, 3, 4, 5, 6, 7) ";
+//        sql+=" VALUES ('" + b+ "','" + c+ "','" + vista.getCb1().toString()+ "','" + vista.getCb2().toString()+ "','" + Integer.parseInt(vista.getCb3().toString())+ "','" + vista.getCb4().toString()+ "','" + vista.getCb5().toString()+ "','" + Integer.parseInt(vista.getCb6().toString())+ "')";
+//        return con.accion(sql);
+//    }
 }

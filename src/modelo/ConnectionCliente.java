@@ -36,8 +36,8 @@ public class ConnectionCliente extends Cliente{
     public ConnectionCliente() {
     }
 
-    public ConnectionCliente(String ci, String nombre, String apellido, int edad, String correo, String telefono, String discapacidad, Image foto) {
-        super(ci, nombre, apellido, edad, correo, telefono, discapacidad, foto);
+    public ConnectionCliente(String ci, String nombres, String apellidos, Date edad, String correo, String telefono, String direccion, String discapacidad, Image foto, String contrasena) {
+        super(ci, nombres, apellidos, edad, correo, telefono, direccion, discapacidad, foto, contrasena);
     }
     public List<Cliente> listarClientes() {
 
@@ -48,12 +48,14 @@ public class ConnectionCliente extends Cliente{
             while (rs.next()) {
                 Cliente p = new Cliente();
                 p.setCi(rs.getString("ci"));//campos de la BD
-                p.setNombre(rs.getString("nombre"));//campos de la BD
-                p.setApellido(rs.getString("apellido"));//campos de la BD
-                p.setEdad(rs.getInt("edad"));
+                p.setNombres(rs.getString("nombre"));//campos de la BD
+                p.setApellidos(rs.getString("apellido"));//campos de la BD
+                p.setEdad(rs.getDate("edad"));
                 p.setTelefono(rs.getString("telefono"));
                 p.setCorreo(rs.getString("correo"));
+                p.setDireccion(rs.getString("direccion"));
                 p.setDiscapacidad(rs.getString("discapacidad"));
+                p.setContrasena(rs.getString("contrasena"));
                 lista.add(p);
             }
             //IMPORTANTISIMO CERRAR CONEXION.
@@ -78,11 +80,12 @@ public class ConnectionCliente extends Cliente{
             while (rs.next()) {
                 Cliente per = new Cliente();
                 per.setCi(rs.getString("ci"));//campos de la BD
-                per.setNombre(rs.getString("nombre"));//campos de la BD
-                per.setApellido(rs.getString("apellido"));//campos de la BD
-                per.setEdad(rs.getInt("edad"));
+                per.setNombres(rs.getString("nombre"));//campos de la BD
+                per.setApellidos(rs.getString("apellido"));//campos de la BD
+                per.setEdad(rs.getDate("edad"));
                 per.setTelefono(rs.getString("telefono"));
                 per.setCorreo(rs.getString("correo"));
+                per.setDireccion(rs.getString("direccion"));
                 per.setDiscapacidad(rs.getString("discapacidad"));
                 lp.add(per);
             }
@@ -96,8 +99,8 @@ public class ConnectionCliente extends Cliente{
     }
     public boolean grabar() {
         String sql;
-        sql="INSERT INTO clientes(ci, nombre, apellido, edad, correo, telefono, discapacidad) ";
-        sql+=" VALUES ('" + getCi()+ "','" + getNombre()+ "','" + getApellido()+ "','" + getEdad()+ "','" + getCorreo()+ "','" + getTelefono()+ "','" + getDiscapacidad()+ "')";
+        sql="INSERT INTO clientes(ci, nombre, apellido, edad, correo, telefono, direccion, discapacidad, contrasena) ";
+        sql+=" VALUES ('" + getCi()+ "','" + getNombres()+ "','" + getApellidos()+ "','" + getEdad()+ "','" + getCorreo()+ "','" + getTelefono()+ "','" + getDireccion()+ "','" + getDiscapacidad()+ "','" + getContrasena()+ "')";
         return con.accion(sql);
     }
 //    public boolean eliminar(String ci){
@@ -105,7 +108,7 @@ public class ConnectionCliente extends Cliente{
 //        return con.accion(nsql);
 //    }
     public boolean editar(String ci){
-        String nsql = "UPDATE clientes set \"nombre\"='" + getNombre()+ "',\"apellido\"='" + getApellido()+ "',\"edad\"='" + getEdad()+ "',\"correo\"='" + getCorreo()+ "',\"telefono\"='" + getTelefono()+ "',\"discapacidad\"='" + getDiscapacidad()+ "'"
+        String nsql = "UPDATE clientes set \"nombre\"='" + getNombres()+ "',\"apellido\"='" + getApellidos()+ "',\"correo\"='" + getCorreo()+ "',\"telefono\"='" + getTelefono()+ "'\"direccion\"='" + getDireccion()+ "'"
                 + "WHERE \"ci\"='" + ci + "'";
         return con.accion(nsql);
     }
